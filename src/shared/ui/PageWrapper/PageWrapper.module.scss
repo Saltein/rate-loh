@@ -1,0 +1,12 @@
+@use "../../../shared/styles/variables.scss";
+
+.wrapper_PageWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.content_PageWrapper {
+    max-width: var(--container-max-width);
+    width: 100%;
+    padding: 20px 0;
+}

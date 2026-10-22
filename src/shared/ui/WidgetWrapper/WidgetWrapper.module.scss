@@ -1,0 +1,8 @@
+@use "../../../shared/styles/variables.scss";
+
+.wrapper_WidgetWrapper {
+    padding: var(--space-6);
+    background-color: var(--color-surface);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-1);
+}

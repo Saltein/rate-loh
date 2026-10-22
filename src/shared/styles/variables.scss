@@ -1,0 +1,413 @@
+/* src/styles/_variables.scss */
+
+/* 
+  Цвета темы задаются через CSS custom properties.
+  По умолчанию используется тёмная тема.
+  Переключение: <html data-theme="light"> или <html data-theme="dark">.
+*/
+
+:root,
+:root[data-theme="dark"] {
+	color-scheme: dark;
+
+	/* Brand / accent */
+	--color-primary: #8b5cf6;
+	--color-primary-hover: #7c3aed;
+	--color-primary-active: #6d28d9;
+	--color-primary-soft: #2e1f4d;
+	--color-on-primary: #ffffff;
+
+	--color-secondary: #64748b;
+	--color-secondary-hover: #475569;
+	--color-on-secondary: #ffffff;
+
+	/* Backgrounds and surfaces */
+	--color-bg: #0f1115;
+	--color-bg-subtle: #151820;
+	--color-surface: #1a1d25;
+	--color-surface-raised: #222632;
+	--color-surface-hover: #292e3b;
+	--color-surface-active: #323849;
+	--color-overlay: rgb(0 0 0 / 60%);
+
+	/* Text */
+	--color-text: #f3f4f6;
+	--color-text-muted: #a1a1aa;
+	--color-text-subtle: #71717a;
+	--color-text-disabled: #52525b;
+	--color-on-primary-text: #ffffff;
+
+	/* Borders and focus */
+	--color-border: #303542;
+	--color-border-strong: #454b5b;
+	--color-focus-ring: #a78bfa;
+	--focus-ring: 0 0 0 3px rgb(167 139 250 / 30%);
+
+	/* Semantic states */
+	--color-success: #22c55e;
+	--color-success-bg: #142d20;
+	--color-warning: #f59e0b;
+	--color-warning-bg: #382a12;
+	--color-danger: #f87171;
+	--color-danger-hover: #ef4444;
+	--color-danger-bg: #3a1b20;
+	--color-info: #38bdf8;
+	--color-info-bg: #142d3a;
+
+	/* Forms */
+	--color-input-bg: #151820;
+	--color-input-border: var(--color-border);
+	--color-input-placeholder: var(--color-text-subtle);
+	--color-input-disabled-bg: #20232b;
+
+	/* Links */
+	--color-link: #a78bfa;
+	--color-link-hover: #c4b5fd;
+
+	/* Shadows */
+	--shadow-sm: 0 1px 2px rgb(0 0 0 / 25%);
+	--shadow-md: 0 4px 12px rgb(0 0 0 / 30%);
+	--shadow-lg: 0 12px 32px rgb(0 0 0 / 40%);
+
+	/* Scrollbars */
+	--color-scrollbar: #383e4b;
+	--color-scrollbar-hover: #4b5363;
+}
+
+:root[data-theme="light"] {
+	color-scheme: light;
+
+	/* Brand / accent */
+	--color-primary: #6d28d9;
+	--color-primary-hover: #5b21b6;
+	--color-primary-active: #4c1d95;
+	--color-primary-soft: #ede9fe;
+	--color-on-primary: #ffffff;
+
+	--color-secondary: #64748b;
+	--color-secondary-hover: #475569;
+	--color-on-secondary: #ffffff;
+
+	/* Backgrounds and surfaces */
+	--color-bg: #f8fafc;
+	--color-bg-subtle: #f1f5f9;
+	--color-surface: #ffffff;
+	--color-surface-raised: #ffffff;
+	--color-surface-hover: #f1f5f9;
+	--color-surface-active: #e2e8f0;
+	--color-overlay: rgb(15 23 42 / 40%);
+
+	/* Text */
+	--color-text: #18181b;
+	--color-text-muted: #52525b;
+	--color-text-subtle: #71717a;
+	--color-text-disabled: #a1a1aa;
+	--color-on-primary-text: #ffffff;
+
+	/* Borders and focus */
+	--color-border: #e4e4e7;
+	--color-border-strong: #d4d4d8;
+	--color-focus-ring: #8b5cf6;
+	--focus-ring: 0 0 0 3px rgb(139 92 246 / 22%);
+
+	/* Semantic states */
+	--color-success: #15803d;
+	--color-success-bg: #dcfce7;
+	--color-warning: #b45309;
+	--color-warning-bg: #fef3c7;
+	--color-danger: #dc2626;
+	--color-danger-hover: #b91c1c;
+	--color-danger-bg: #fee2e2;
+	--color-info: #0369a1;
+	--color-info-bg: #e0f2fe;
+
+	/* Forms */
+	--color-input-bg: #ffffff;
+	--color-input-border: var(--color-border-strong);
+	--color-input-placeholder: #a1a1aa;
+	--color-input-disabled-bg: #f4f4f5;
+
+	/* Links */
+	--color-link: #6d28d9;
+	--color-link-hover: #5b21b6;
+
+	/* Shadows */
+	--shadow-sm: 0 1px 2px rgb(15 23 42 / 6%);
+	--shadow-md: 0 4px 12px rgb(15 23 42 / 9%);
+	--shadow-lg: 0 12px 32px rgb(15 23 42 / 14%);
+
+	/* Scrollbars */
+	--color-scrollbar: #d4d4d8;
+	--color-scrollbar-hover: #a1a1aa;
+}
+
+/* Layout and sizing — shared by both themes */
+:root {
+	/* Typography */
+	--font-family:
+		"Roboto", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+		sans-serif;
+	--font-size-xs: 0.75rem;
+	--font-size-sm: 0.875rem;
+	--font-size-md: 1rem;
+	--font-size-lg: 1.125rem;
+	--font-size-xl: 1.25rem;
+	--font-size-xxl: 1.5rem;
+	--font-size-xxxl: 1.875rem;
+	--line-height-tight: 1.25;
+	--line-height-normal: 1.5;
+	--line-height-relaxed: 1.75;
+	--font-weight-normal: 400;
+	--font-weight-medium: 500;
+	--font-weight-semibold: 600;
+	--font-weight-bold: 700;
+
+	/* Spacing */
+	--space-1: 0.25rem;
+	--space-2: 0.5rem;
+	--space-3: 0.75rem;
+	--space-4: 1rem;
+	--space-5: 1.25rem;
+	--space-6: 1.5rem;
+	--space-7: 2rem;
+	--space-8: 2.5rem;
+	--space-9: 3rem;
+	--space-10: 4rem;
+
+	/* Radius */
+	--radius-sm: 0.25rem;
+	--radius-md: 0.5rem;
+	--radius-lg: 0.75rem;
+	--radius-xl: 1rem;
+	--radius-xxl: 1.5rem;
+	--radius-xxxl: 2rem;
+	--radius-full: 9999px;
+
+	/* Transitions */
+	--transition-fast: 120ms ease;
+	--transition-normal: 200ms ease;
+	--transition-slow: 300ms ease;
+
+	/* Layering */
+	--z-dropdown: 1000;
+	--z-sticky: 1100;
+	--z-overlay: 1200;
+	--z-modal: 1300;
+	--z-toast: 1400;
+
+	/* Common sizing */
+	--container-max-width: 1200px;
+	--header-height: 64px;
+	--sidebar-width: 260px;
+}
+
+/* Optional global baseline */
+html {
+	font-family: var(--font-family);
+	color: var(--color-text);
+	background: var(--color-bg);
+}
+
+body {
+	margin: 0;
+	min-width: 320px;
+	min-height: 100vh;
+	background: var(--color-bg);
+	color: var(--color-text);
+	transition:
+		background-color var(--transition-normal),
+		color var(--transition-normal);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+button,
+input,
+textarea,
+select {
+	font: inherit;
+}
+
+:focus-visible {
+	outline: 2px solid var(--color-focus-ring);
+	outline-offset: 2px;
+}
+
+::selection {
+	color: var(--color-on-primary);
+	background: var(--color-primary);
+}
+
+/* =========================================
+   RESPONSIVE BREAKPOINTS
+   ========================================= */
+
+/*
+  Mobile:       < 576px
+  Mobile L:     576px+
+  Tablet:       768px+
+  Laptop:       1024px+
+  Desktop:      1280px+
+  Full HD:      1440px+
+  QHD / 1440p:  1920px+
+  4K / 2160p:   2560px+
+  Large 4K:     3840px+
+*/
+
+/* Base — mobile-first */
+:root {
+	/* Responsive container */
+	--container-padding: 1rem;
+	--container-max-width: 100%;
+
+	/* Responsive layout */
+	--header-height: 56px;
+	--sidebar-width: 240px;
+
+	/* Responsive typography */
+	--font-size-display: 2rem;
+	--font-size-heading: 1.5rem;
+
+	/* Responsive spacing */
+	--section-gap: 1.5rem;
+	--card-padding: 1rem;
+	--grid-gap: 1rem;
+}
+
+/* Small mobile */
+@media (min-width: 576px) {
+	:root {
+		--container-padding: 1.25rem;
+		--container-max-width: 540px;
+
+		--header-height: 60px;
+
+		--font-size-display: 2.25rem;
+		--font-size-heading: 1.75rem;
+
+		--section-gap: 2rem;
+		--card-padding: 1.25rem;
+		--grid-gap: 1.25rem;
+	}
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+	:root {
+		--container-padding: 1.5rem;
+		--container-max-width: 720px;
+
+		--header-height: 64px;
+		--sidebar-width: 240px;
+
+		--font-size-display: 2.5rem;
+		--font-size-heading: 2rem;
+
+		--section-gap: 2.5rem;
+		--card-padding: 1.5rem;
+		--grid-gap: 1.5rem;
+	}
+}
+
+/* Laptop */
+@media (min-width: 1024px) {
+	:root {
+		--container-max-width: 960px;
+		--sidebar-width: 250px;
+
+		--font-size-display: 3rem;
+		--font-size-heading: 2.25rem;
+
+		--section-gap: 3rem;
+		--grid-gap: 1.5rem;
+	}
+}
+
+/* Desktop */
+@media (min-width: 1280px) {
+	:root {
+		--container-max-width: 1200px;
+		--container-padding: 2rem;
+
+		--sidebar-width: 260px;
+
+		--font-size-display: 3.25rem;
+		--font-size-heading: 2.5rem;
+
+		--section-gap: 3.5rem;
+		--card-padding: 1.5rem;
+		--grid-gap: 1.5rem;
+	}
+}
+
+/* Full HD and wider */
+@media (min-width: 1440px) {
+	:root {
+		--container-max-width: 1320px;
+
+		--font-size-display: 3.5rem;
+		--font-size-heading: 2.5rem;
+
+		--section-gap: 4rem;
+		--card-padding: 1.75rem;
+		--grid-gap: 1.75rem;
+	}
+}
+
+/* QHD / 1440p — 2560 × 1440 */
+@media (min-width: 1920px) {
+	:root {
+		--container-max-width: 1600px;
+		--container-padding: 2.5rem;
+
+		--header-height: 76px;
+		--sidebar-width: 300px;
+
+		--font-size-display: 4rem;
+		--font-size-heading: 3rem;
+
+		--section-gap: 4.5rem;
+		--card-padding: 2rem;
+		--grid-gap: 2rem;
+	}
+}
+
+/* 4K / 2160p — 3840 × 2160 */
+@media (min-width: 2560px) {
+	:root {
+		--container-max-width: 2000px;
+		--container-padding: 3rem;
+
+		--header-height: 88px;
+		--sidebar-width: 340px;
+
+		--font-size-display: 4.5rem;
+		--font-size-heading: 3.25rem;
+
+		--section-gap: 5rem;
+		--card-padding: 2.25rem;
+		--grid-gap: 2.25rem;
+	}
+}
+
+/* Large 4K and ultra-wide displays */
+@media (min-width: 3840px) {
+	:root {
+		--container-max-width: 2400px;
+		--container-padding: 4rem;
+
+		--header-height: 96px;
+		--sidebar-width: 380px;
+
+		--font-size-display: 5rem;
+		--font-size-heading: 3.5rem;
+
+		--section-gap: 6rem;
+		--card-padding: 2.5rem;
+		--grid-gap: 2.5rem;
+	}
+}
